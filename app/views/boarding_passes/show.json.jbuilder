@@ -1,0 +1,1 @@
+json.partial! "boarding_passes/boarding_pass", boarding_pass: @boarding_pass

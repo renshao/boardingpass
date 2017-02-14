@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Boarding Passes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Departure airport code</th>
+      <th>Arrival airport code</th>
+      <th>Flight number</th>
+      <th>Departure datetime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boarding_passes.each do |boarding_pass| %>
+      <tr>
+        <td><%= boarding_pass.departure_airport_code %></td>
+        <td><%= boarding_pass.arrival_airport_code %></td>
+        <td><%= boarding_pass.flight_number %></td>
+        <td><%= boarding_pass.departure_datetime %></td>
+        <td><%= link_to 'Show', boarding_pass %></td>
+        <td><%= link_to 'Edit', edit_boarding_pass_path(boarding_pass) %></td>
+        <td><%= link_to 'Destroy', boarding_pass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Boarding Pass', new_boarding_pass_path %>

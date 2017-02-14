@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Departure airport code:</strong>
+  <%= @boarding_pass.departure_airport_code %>
+</p>
+
+<p>
+  <strong>Arrival airport code:</strong>
+  <%= @boarding_pass.arrival_airport_code %>
+</p>
+
+<p>
+  <strong>Flight number:</strong>
+  <%= @boarding_pass.flight_number %>
+</p>
+
+<p>
+  <strong>Departure datetime:</strong>
+  <%= @boarding_pass.departure_datetime %>
+</p>
+
+<%= link_to 'Edit', edit_boarding_pass_path(@boarding_pass) %> |
+<%= link_to 'Back', boarding_passes_path %>
