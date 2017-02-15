@@ -69,6 +69,6 @@ class BoardingPassesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boarding_pass_params
-      params.require(:boarding_pass).permit(:departure_airport_code, :arrival_airport_code, :flight_number, :departure_datetime)
+      params.require(:boarding_pass).permit(:image, :departure_airport_code, :arrival_airport_code, :flight_number, :departure_datetime)
     end
 end

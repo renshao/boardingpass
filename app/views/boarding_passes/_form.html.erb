@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+  <div>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
   <div class="field">
     <%= f.label :departure_airport_code %>
     <%= f.text_field :departure_airport_code %>
